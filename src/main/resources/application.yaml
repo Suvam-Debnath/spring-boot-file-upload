@@ -1,3 +1,20 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: fileupload
+
+  datasource:
+    url: ${DB_URL}   # DB name: fileupload
+    username: ${DB_USER}
+    password: ${DB_PWD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
